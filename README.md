@@ -26,7 +26,7 @@ These are some of the features that are currently implemented:
 
 ```go
 
-import "github.com/bndr/gojenkins"
+import "github.com/bestswifter/gojenkins"
 
 jenkins := gojenkins.CreateJenkins(nil, "http://localhost:8080/", "admin", "admin")
 // Provide CA certificate if server is using self-signed certificate
@@ -88,7 +88,7 @@ API Reference: https://godoc.org/github.com/bndr/gojenkins
 
 For all of the examples below first create a jenkins object
 ```go
-import "github.com/bndr/gojenkins"
+import "github.com/bestswifter/gojenkins"
 
 jenkins, _ := gojenkins.CreateJenkins(nil, "http://localhost:8080/", "admin", "admin").Init()
 ```

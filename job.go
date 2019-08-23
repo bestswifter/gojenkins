@@ -407,7 +407,9 @@ func (j *Job) InvokeSimple(params map[string]string) (int64, error) {
 	if err != nil {
 		return 0, err
 	}
-	if isQueued {
+	
+	// If has parameter, use buildWithParameters does not care about the queue
+	if isQueued && len(params) == 0 {
 		Error.Printf("%s is already running", j.GetName())
 		return 0, nil
 	}

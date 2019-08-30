@@ -82,9 +82,11 @@ func (q *Queue) GetTaskById(id int64) *Task {
 
 func (q *Queue) GetTasksForJob(name string) []*Task {
 	tasks := make([]*Task, 0)
-	for _, t := range q.Raw.Items {
+	for i := 0; i < len(q.Raw.Items); i++ {
+		t := q.Raw.Items[i]
 		if t.Task.Name == name {
-			tasks = append(tasks, &Task{Jenkins: q.Jenkins, Queue: q, Raw: &t})
+			task := &Task{Jenkins: q.Jenkins, Queue: q, Raw: &t}
+			tasks = append(tasks, task)
 		}
 	}
 	return tasks

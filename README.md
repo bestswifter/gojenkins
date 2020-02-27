@@ -1,3 +1,5 @@
+v1.0.3
+
 # Jenkins API Client for Go
 
 [![GoDoc](https://godoc.org/github.com/bndr/gojenkins?status.svg)](https://godoc.org/github.com/bndr/gojenkins)
